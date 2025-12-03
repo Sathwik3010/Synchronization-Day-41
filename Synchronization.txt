@@ -1,0 +1,34 @@
+Synchronization keyword
+-----------------------
+1)Synchronization Is a key word applicable for methods and blocks but not for classes and variables.
+2)if a method or block is declared as synchronization then at a time only one Thread is allowed to execute that method or block on the given object.
+3) the main advantage of synchronization keyword is we can resolve data inconsistency problems.
+4)But the main disadvantage of  synchronization keyword is waiting time of a thread and effects performance of the system.
+5) Hence there is no specific requirement that never recommended to use synchronization keyword.
+6) internally synchronization concept is implemented by using lock concept.
+7) Every Object in java has a unique lock. whenever we are using synchronization keyword then only lock concept will came into the picture.
+8) If a thread want to execute any synchronization method on the given object 1st it as to get lock of that Object. Once a thread got the lock of the Object then it is allowed to execute any synchronization method on that Object. If the synchronization method execution completes automatically threads releases the lock.
+9) while a Thread executing any synchronization method remaining Threads are not allowed to execute synchronized method on that Object simultaneously. but remaining Threads are allowed to execute non-synchronized method simultaneously. [Lock Concept is based on that object but not based on method].
+
+Synchronized Block
+-------------------
+if few lines of the code Is required in synchronization then we should go for synchronized block.
+compared to synchronization synchronized block is highly recommended to use. because it has resolved the data inconsistency problems as well as it improves performance of the system.
+
+syntax
+-------
+Synchronized{
+}
+
+DeadLock
+-----------
+if 2 threads are waiting for each other forever(without end) such type of situation(infinite waiting) is called deadlock.
+there is no resolution techniques for deadlock but several preventions takes place.
+
+Daemon Threads
+--------------
+The Threads which are executed in the background is called as Daemon Threads the main
+
+Starvation Threads
+------------------
+if 2 threads are waiting for a certain amount of time and then starts after certain period of time.
